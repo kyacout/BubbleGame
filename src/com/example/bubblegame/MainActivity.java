@@ -14,7 +14,6 @@ public class MainActivity extends Activity {
 	Button level_2;
 	BubbleView bubbleView;
 	/***********************************************/
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

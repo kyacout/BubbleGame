@@ -20,9 +20,10 @@ public class BubbleView extends View{
 	public boolean onTouchEvent(MotionEvent event) {
 		if (lose) {
 			lose = false;
-			/**continue */
 			initNewGame();
-		} else {}
+		} else {
+			/**continue */
+		}
 		
 		return true;
 	}

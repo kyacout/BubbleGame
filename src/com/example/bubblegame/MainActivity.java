@@ -18,8 +18,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		bubbleView = new BubbleView(this);
-		bubbleView = (BubbleView) findViewById(R.id.myview1);
+	//	bubbleView = (BubbleView) findViewById(R.id.myview1);
 
 		newGame = (Button) findViewById(R.id.new_game);
 		newGame.setOnClickListener(new  View.OnClickListener(){
@@ -65,13 +64,14 @@ public class MainActivity extends Activity {
 				});
 			}
 		});
+		bubbleView = new BubbleView(this);
 	}
 	
-	@Override
+	/*@Override
 	protected void onPause() {
 		super.onPause();
 		bubbleView.BubbleView_OnPause();
-	}
+	}*/
 	@Override
 	protected void onResume() {
 		super.onResume();

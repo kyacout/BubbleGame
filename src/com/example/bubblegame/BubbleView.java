@@ -1,6 +1,5 @@
 package com.example.bubblegame;
 
-import java.util.Random;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -14,7 +13,6 @@ public class BubbleView extends SurfaceView implements SurfaceHolder.Callback {
 
 	SurfaceHolder surfaceHolder;
 	Game myGame = null;
-	Random random;
 
 	static private Bubble[][] bubbles;
 	static private Bitmap[] bubble = new Bitmap[5];
@@ -24,6 +22,9 @@ public class BubbleView extends SurfaceView implements SurfaceHolder.Callback {
 
 	public BubbleView(Context context) {
 		super(context);
+		initNewGame();
+		// adding the callback (this) to the surface holder to intercept events
+		getHolder().addCallback(this);
 	}
 
 	public BubbleView(Context context, AttributeSet atts) {
@@ -69,7 +70,8 @@ public class BubbleView extends SurfaceView implements SurfaceHolder.Callback {
 
 	public void update() {
 	}
-
+	@Override
+	protected void onDraw(Canvas canvas) {};
 	/*****************************************************************************/
 
 	@Override
@@ -110,9 +112,10 @@ public class BubbleView extends SurfaceView implements SurfaceHolder.Callback {
 		getHolder().addCallback(this);
 
 		/*** Create and start background Thread */
-		myGame = new Game(this, 500);
+		myGame = new Game(this, 50);
 		myGame.setRunning(true);
 		myGame.start();
+		
 	}
 
 	public void BubbleView_OnPause() {
@@ -120,11 +123,12 @@ public class BubbleView extends SurfaceView implements SurfaceHolder.Callback {
 		/*** kill background Thread */
 		boolean retry = true;
 		myGame.setRunning(false);
+		myGame.run();
 
 		while (retry) {
-			try {
-				myGame.join();
-				retry = false;
+		try {
+			myGame.join();
+			retry = false;
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

@@ -1,8 +1,10 @@
 package com.example.bubblegame;
 
+import android.graphics.Canvas;
+
 public class Game extends Thread {
-	boolean running = false;
-	long sleepTime;
+	volatile boolean running = false;
+	long sleepTime ;
 	BubbleView bubbleView;
 	
 	Game(BubbleView bv, long st) {
@@ -17,13 +19,11 @@ public class Game extends Thread {
 
 	@Override
 	public void run() {
-		while (running) { 
-			try {
-				sleep(sleepTime);
-				bubbleView.updateSurfaceView();
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+		try {
+			Thread.sleep(30);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 }

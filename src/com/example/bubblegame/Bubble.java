@@ -8,14 +8,12 @@ public class Bubble {
 	int dy;		
 	int color;
 	boolean destroy ;
-	boolean markedCheck=false;
 	
 	public Bubble() {
 		// TODO Auto-generated constructor stub
 		dx=0;
 		dy=0;
 		destroy=true;
-		markedCheck=false;
 	}
 	public Bubble(Bitmap bitmap, int x, int y) {
 		super();

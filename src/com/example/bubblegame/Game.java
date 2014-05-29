@@ -1,12 +1,29 @@
 package com.example.bubblegame;
 
 public class Game extends Thread {
-	private boolean running = true;
+	boolean running = false;
+	long sleepTime;
+	BubbleView bubbleView;
+	
+	Game(BubbleView bv, long st) {
+		super();
+		bubbleView = bv;
+		sleepTime = st;
+	}
+	
+	public void setRunning(boolean rn) {
+		running = rn;
+	}
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
-		while (running) { // call back or read render update
+		while (running) { 
+			try {
+				sleep(sleepTime);
+				bubbleView.updateSurfaceView();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
 			}
+		}
 	}
 }

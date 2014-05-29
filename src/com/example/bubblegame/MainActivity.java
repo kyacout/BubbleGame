@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		bubbleView = new BubbleView(this);
+		bubbleView = (BubbleView) findViewById(R.id.myview1);
 
 		newGame = (Button) findViewById(R.id.new_game);
 		newGame.setOnClickListener(new  View.OnClickListener(){
@@ -42,6 +43,7 @@ public class MainActivity extends Activity {
 					public void onClick(View v) {
 						// TODO Auto-generated method stub
 						BubbleView.level = 1;
+						
 						/**
 						 * must display bubbles sorted according to level number -- in BubbleView class
 						 **/
@@ -67,16 +69,16 @@ public class MainActivity extends Activity {
 	
 	@Override
 	protected void onPause() {
-		// TODO Auto-generated method stub
 		super.onPause();
+		bubbleView.BubbleView_OnPause();
 	}
 	@Override
-	protected void onStop() {
-		super.onStop();
-	}
+	protected void onResume() {
+		super.onResume();
+		bubbleView.BubbleView_OnResume();
+	};
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
 	}
-
 }

@@ -23,5 +23,10 @@
         android:layout_marginLeft="34dp"
         android:layout_marginTop="53dp"
         android:text="@string/choose_level" />
+     
+     <com.example.bubblegame.BubbleView
+     android:id="@+id/myview1"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent" />
 
 </RelativeLayout>

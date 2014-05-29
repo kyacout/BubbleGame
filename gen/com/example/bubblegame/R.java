@@ -26,13 +26,19 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int bubble_blue=0x7f020000;
+        public static final int bubble_deepblue=0x7f020001;
+        public static final int bubble_green=0x7f020002;
+        public static final int bubble_orange=0x7f020003;
+        public static final int bubble_red=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
     }
     public static final class id {
-        public static final int action_settings=0x7f080004;
+        public static final int action_settings=0x7f080005;
         public static final int choose_level=0x7f080001;
-        public static final int level_1=0x7f080002;
-        public static final int level_2=0x7f080003;
+        public static final int level_1=0x7f080003;
+        public static final int level_2=0x7f080004;
+        public static final int myview1=0x7f080002;
         public static final int new_game=0x7f080000;
     }
     public static final class layout {

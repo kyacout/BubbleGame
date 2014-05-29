@@ -25,9 +25,10 @@ public class MainActivity extends Activity {
 		newGame.setOnClickListener(new  View.OnClickListener(){
 			@Override
  		   public void onClick(View v) {	
- 			   setContentView(bubbleView);
+				setContentView(R.layout.game);
  		   }
  		   });
+		
 		
 		selectLevel = (Button) findViewById(R.id.choose_level);
 		selectLevel.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +48,7 @@ public class MainActivity extends Activity {
 						/**
 						 * must display bubbles sorted according to level number -- in BubbleView class
 						 **/
-						setContentView(bubbleView);
+						setContentView(R.layout.game);
 					}
 				});
 
@@ -60,14 +61,14 @@ public class MainActivity extends Activity {
 						/**
 						 * must display bubbles sorted according to level number -- in BubbleView class
 						 **/
-						setContentView(bubbleView);
+						setContentView(R.layout.game);
 					}
 				});
 			}
 		});
 	
 	}
-	
+/*	
 	@Override
 	protected void onPause() {
 		super.onPause();
@@ -81,5 +82,5 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-	}
+	}*/
 }

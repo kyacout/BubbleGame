@@ -105,13 +105,13 @@ public class BubbleView extends SurfaceView implements SurfaceHolder.Callback  {
 	}
 
 	/**************************************************************************************/
-
+/*
 	public void BubbleView_OnResume() {
 
 		surfaceHolder = getHolder();
 		getHolder().addCallback(this);
 
-		/*** Create and start background Thread */
+		*//*** Create and start background Thread *//*
 		myGame = new Game(this, 50);
 		myGame.setRunning(true);
 		myGame.start();
@@ -120,7 +120,7 @@ public class BubbleView extends SurfaceView implements SurfaceHolder.Callback  {
 
 	public void BubbleView_OnPause() {
 		
-		/*** kill background Thread */
+		*//*** kill background Thread *//*
 		boolean retry = true;
 		myGame.setRunning(false);
 		myGame.run();
@@ -134,5 +134,5 @@ public class BubbleView extends SurfaceView implements SurfaceHolder.Callback  {
 			}
 		}
 	}
-	/**************************************************************************************/
+*/	/**************************************************************************************/
 }

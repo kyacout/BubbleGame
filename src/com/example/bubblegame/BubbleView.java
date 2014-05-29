@@ -9,8 +9,7 @@ import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-public class BubbleView extends SurfaceView implements SurfaceHolder.Callback {
-
+public class BubbleView extends SurfaceView implements SurfaceHolder.Callback  {
 	SurfaceHolder surfaceHolder;
 	Game myGame = null;
 
@@ -70,6 +69,7 @@ public class BubbleView extends SurfaceView implements SurfaceHolder.Callback {
 
 	public void update() {
 	}
+
 	@Override
 	protected void onDraw(Canvas canvas) {};
 	/*****************************************************************************/

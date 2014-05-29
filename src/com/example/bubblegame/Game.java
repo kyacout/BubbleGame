@@ -1,7 +1,5 @@
 package com.example.bubblegame;
 
-import android.graphics.Canvas;
-
 public class Game extends Thread {
 	volatile boolean running = false;
 	long sleepTime ;
